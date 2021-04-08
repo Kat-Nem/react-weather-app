@@ -1,38 +1,112 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+body {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 500;
+  color: #141518;
+}
+
+header {
+  padding: 5px 0;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  padding-left: 0;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.container {
+  background: linear-gradient(
+    0deg,
+    rgba(236, 237, 242, 1) 35%,
+    rgba(251, 195, 228, 1) 100%
+  );
+  margin-top: 10px;
+  border: 1px solid #141518;
+  border-radius: 10px;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 5px 5px 20px 5px #d3d3d3;
+}
+
+.temp-today {
+  font-size: 50px;
+}
+
+.today-details-right {
+  font-size: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.today-details-left {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.units {
+  position: relative;
+  bottom: 25px;
+}
+
+.today-icon {
+  max-width: 25%;
+}
+
+.five-day-forecast {
+  padding: 10px 0px;
+  margin: 15px 5px;
+  border: 2px solid #fbafda;
+  border-radius: 10px;
+}
+
+.forecast-icon {
+  max-width: 40%;
+}
+
+.active {
+  text-decoration: none;
+  color: #141518;
+  font-weight: 900;
+  font-size: 120%;
+}
+
+.active:hover {
+  cursor: default;
+}
+
+.inactive {
+  text-decoration: underline;
+  color: #141518;
+}
+
+.inactive:hover {
+  cursor: pointer;
+}
+
+.code {
+  text-align: left;
+  font-size: small;
+}
+
+.icons {
+  text-align: right;
+  font-size: small;
+}
+
+.footer {
+  margin-top: 10px;
+  opacity: 0.7;
 }

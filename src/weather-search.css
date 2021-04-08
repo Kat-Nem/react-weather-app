@@ -1,0 +1,35 @@
+form {
+  display: inline;
+  width: 100%;
+  margin: 5px;
+}
+
+input {
+  border-radius: 10px;
+  border: 1px solid #141518;
+  outline: none;
+  background-color: #ecedf2;
+}
+
+button {
+  border-radius: 10px;
+  border: 1px solid #141518;
+  background-color: #ecedf2;
+  transition: all 200ms ease-in-out;
+  padding: 0px 10px;
+}
+
+button:hover {
+  background-color: #fbc3e4c9;
+}
+.form-element {
+  margin: 0px;
+  padding: 0px;
+  width: 95%;
+}
+.col {
+  padding: 0px;
+}
+.col-sm-6 {
+  padding: 0px;
+}
