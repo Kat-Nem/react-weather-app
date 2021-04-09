@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Forecast from "./Forecast.js";
 
 export default function WeatherSearch() {
   let [city, setCity] = useState(null);
@@ -12,6 +13,8 @@ export default function WeatherSearch() {
   }
   function displayWeather(response) {
     console.log(response);
+    let object = response.data;
+    console.log(object);
     if (city) {
       setWeather(
         <div>
@@ -28,6 +31,12 @@ export default function WeatherSearch() {
                 alt="weather icon"
               />
             </li>
+            <div>
+              <Forecast
+                lat={response.data.coord.lat}
+                lon={response.data.coord.lon}
+              />
+            </div>
           </ul>
         </div>
       );
@@ -35,6 +44,7 @@ export default function WeatherSearch() {
   }
   let apiKey = `3975788e63c7f2d707103c2c24ee6bb0`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
   function handleSubmit(event) {
     event.preventDefault();
     axios.get(apiUrl).then(displayWeather);
