@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Forecast from "./Forecast.js";
 
 export default function WeatherSearch() {
   let [city, setCity] = useState(null);
@@ -12,10 +11,8 @@ export default function WeatherSearch() {
     setCity(event.target.value);
   }
   function displayWeather(response) {
-    console.log(response);
-    let object = response.data;
-    console.log(object);
     if (city) {
+      console.log(response.data);
       setWeather(
         <div>
           <ul>
@@ -31,12 +28,6 @@ export default function WeatherSearch() {
                 alt="weather icon"
               />
             </li>
-            <div>
-              <Forecast
-                lat={response.data.coord.lat}
-                lon={response.data.coord.lon}
-              />
-            </div>
           </ul>
         </div>
       );
