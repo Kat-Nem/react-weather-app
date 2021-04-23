@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Container>
         <DateAndTime />
-        <WeatherSearch />
+        <WeatherSearch defaultCity="London" />
       </Container>
       <p className="links">
         <a
